@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  wekept:
+    image: php:7.4-apache
+    container_name: wekept
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.wekept.rule=Host(`wekept.test`)"
+      - "traefik.http.routers.wekept.entrypoints=websecure"
+      - "traefik.http.routers.wekept.tls.certresolver=myresolver"
+    networks:
+      - web
+      - mysql_net
+    depends_on:
+      - mysql
+
+networks:
+  web:
+    external: true
+  mysql_net:
+    external: true

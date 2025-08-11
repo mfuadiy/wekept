@@ -1,0 +1,69 @@
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+
+          <div class="row">
+
+            <!-- Jumlah Peserta Aktif -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                        Peserta Aktif</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $numAktif; ?></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user-tie fa-2x text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Jumlah Peserta Pasif -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                        Peserta Pasif (Pensiunan)</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $numPasif; ?></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user fa-2x text-success"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Jumlah Data Yang Sudah Data Ulang -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                        Data Ulang Terkonfirmasi</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $numDatul; ?></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user-check fa-2x text-danger "></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
