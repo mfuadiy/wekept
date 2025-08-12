@@ -93,11 +93,11 @@ class Pasif extends CI_Controller
 
     public function datul()
     {
-        $data['title']  = 'Data Ulang';
-        $data['judul']  = 'Peserta Pasif';
-        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $data['peoples']    = $this->pasif->getAllPensiun();
-        $data['datul'] = $this->db->get('datul')->row_array();
+        $data['title']      = 'Data Ulang';
+        $data['judul']      = 'Peserta Pasif';
+        $data['user']       = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['peoples']    = $this->db->get_where('datul', ['periode' => '2025'])->result_array();
+        $data['datul']      = $this->db->get('datul')->row_array();
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);

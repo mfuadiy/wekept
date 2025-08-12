@@ -12,7 +12,7 @@ class Pasif_model extends CI_Model
         $this->db->from('peserta_pasif');
         $this->db->join('dbpn', 'dbpn.npk = peserta_pasif.npk', 'right');
         $this->db->where('dbpn.p_bln', '01');
-        $this->db->where('dbpn.p_thn', '2024');
+        $this->db->where('dbpn.p_thn', '2025');
         $this->db->order_by('dbpn.nama', 'ASC');
         $query = $this->db->get()->result_array();
         return ($query);
@@ -24,7 +24,7 @@ class Pasif_model extends CI_Model
         $this->db->from('peserta_pasif');
         $this->db->join('dbpn', 'dbpn.npk = peserta_pasif.npk');
         $this->db->where('dbpn.p_bln', '01');
-        $this->db->where('dbpn.p_thn', '2024');
+        $this->db->where('dbpn.p_thn', '2025');
         $this->db->order_by('dbpn.nama', 'ASC');
         return $this->db->get()->result_array();
     }
@@ -36,7 +36,7 @@ class Pasif_model extends CI_Model
         $this->db->join('dbpn', 'dbpn.npk = peserta_pasif.npk', 'right');
         $this->db->where('peserta_pasif.npk', $npk);
         $this->db->where('dbpn.p_bln', '01');
-        $this->db->where('dbpn.p_thn', '2024');
+        $this->db->where('dbpn.p_thn', '2025');
         $this->db->order_by('peserta_pasif.nama', 'ASC');
         $query = $this->db->get()->row_array();
         return ($query);
